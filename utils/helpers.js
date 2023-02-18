@@ -1,4 +1,1 @@
-module.exports = {
-    runtest: () => {console.log("test")}
-  };
-  
+// document.getElementById("login-tab2").addEventListener("click",fetchLogin);
