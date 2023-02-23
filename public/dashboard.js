@@ -6,7 +6,7 @@ const newPostForm = async (event) => {
 	const description = document.querySelector('#content-area').value.trim();
 
 	if (title && description) {
-		const response = await fetch(`/api/posts`, {
+		const response = await fetch(`/api/post`, {
 			method: 'POST',
 			body: JSON.stringify({ title, description }),
 			headers: {

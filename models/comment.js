@@ -19,14 +19,14 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    BID: {
+    bid: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'blog',
+        model: 'post',
         key: 'id',
       },
     },
-    UID: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
