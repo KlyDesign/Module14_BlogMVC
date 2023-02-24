@@ -1,0 +1,21 @@
+<div class="container-fluid m-4 mx-auto">
+    <div class="row">
+        <div class="col-12 bg-success">
+            <h1 class="text-center text-white">Hi, {{[0].user.name}}</h1>
+        </div>
+    </div>
+    <div  class = "row">
+        <section>
+            <h2>Your Post</h2>
+            <ul>
+                {{#each posts as |post|}}
+                <li>
+                    <h1> display {{post.title}}</h1>
+                    <a href="/dashboard/edit/{{post.id}}">edit</a>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+
+    </div>
+</div>
