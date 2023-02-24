@@ -21,20 +21,24 @@ router.put("/:id", withAuth, async (req, res) => {
     const editPost = await Post.update({
       title: req.body.title,
       content: req.body.description,
-      }, {
-          where: {
-              _id: req.params.id,
-          },
+      }, 
+      {
+        where: {
+            id: req.params.id,
+        },
       })
     if (!editPost) {
       res.status(404).json({ message: '404 not found' });
       return;
     }
-    res.status(200).json(editPost);}
+    res.status(200).json(editPost);
+  }
     catch (err) {
       res.status(500).json(err);
     }
 });
+
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({
