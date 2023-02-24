@@ -4,27 +4,28 @@
     "description": "Blog Using MVC and Node.js Modules and Sql",
     "main": "server.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js",
-      "seed": "node seed/seed/index.js",
-      "watch": "node --watch server.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "seed": "node seed/seed/index.js",
+        "watch": "node --watch server.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/spfave/blog-site-mvc.git"
+        "type": "git",
+        "url": "git+https://github.com/spfave/blog-site-mvc.git"
     },
     "keywords": [],
     "author": "Kyle Hipple",
     "license": "MIT",
     "dependencies": {
-      "bcrypt": "^5.1.0",
-      "connect-session-sequelize": "^7.1.5",
-      "dotenv": "^16.0.3",
-      "express": "^4.18.2",
-      "express-handlebars": "^6.0.7",
-      "express-session": "^1.17.3",
-      "handlebars": "^4.7.7",
-      "mysql2": "^3.1.2",
-      "sequelize": "^6.28.0"
+        "bcrypt": "^5.1.0",
+        "bootstrap-icons": "^1.10.3",
+        "connect-session-sequelize": "^7.1.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-handlebars": "^6.0.7",
+        "express-session": "^1.17.3",
+        "handlebars": "^4.7.7",
+        "mysql2": "^3.1.2",
+        "sequelize": "^6.28.0"
     }
-  }
+}
