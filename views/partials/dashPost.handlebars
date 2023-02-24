@@ -5,8 +5,10 @@
     </div>
   </div>
   <div class="card-body">
-    <p class="card-text">{{description}}</p>
-    <p class="card-text"> Created By <b>{{user.name}} </b> on</p>
-  </div>
-
+    <p class="card-text">{{description}} id: <a id="delVal">{{id}}</a></p>
+    <p class="card-text"> Created By <b>{{user.name}} </b> on {{date_created}}</p>
+    <div class="mx-auto m-2">
+      <a href="/dashboard/{{id}}"  class="col-3 btn btn-success" type="button">EDIT POST</a>
+    </div>   
+</div>
 
