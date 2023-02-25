@@ -19,7 +19,7 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    bid: {
+    post_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'post',

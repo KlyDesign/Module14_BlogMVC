@@ -52,42 +52,6 @@ try{
       res.status(500).json(err);
     }
   });
-
-router.get('/post/:id', withAuth, async (req, res) => {
-  try{
-    if (!req.session.logged_in) {
-      res.redirect('/login');
-      return;
-    }
-    const viewPost = await Post.findOne({
-      where: {
-          id: req.params.id
-      },
-      attributes: [
-        'id',
-        'title',
-        'description',
-        'date_created'
-      ],
-      include: [
-          {
-              model: User,
-              attributes: ['name']
-          }
-      ]
-})
-const vPost = viewPost.get({ plain: true });
-res.render('postView', {
-    ...vPost,
-    logged_in: true
-});
-}
-catch(err) {
-    console.log(err);
-    res.status(500).json(err);
-}
-});
-
 router.get('/:id', withAuth, async (req, res) => {
   try{
     if (!req.session.logged_in) {
@@ -106,8 +70,8 @@ router.get('/:id', withAuth, async (req, res) => {
             ],
             include: [
                 {
-                    model: User,
-                    attributes: ['name']
+                  model: User,
+                  attributes: ['name']
                 }
             ]
       })
