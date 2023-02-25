@@ -5,21 +5,21 @@
             <h1 class="text-center text-white">{{user.name}}'s Edit to {{title}} Post</h1>
         </div>
         <h1>
-            Edit your Blog Post:
+            {{title}} was Created on the Day: {{format_date date_created}}
         </h1>
     </div>
         <form id="EditForm" class="d-flex-block mx-auto m-3 col-6">
             <div class="form-group p-3">
                 <label class="display-6" for="title-area">Title: </label>
                 </br>
-                <textarea type="text" class="form-control-lg w-100" id="title-area" placeholder="Example Title">{{title}}</textarea>
+                <textarea type="text" class="form-control-lg w-100" id="title-area">{{title}}</textarea>
             </div>
             <div class="form-group p-3">
-                <label class="display-6" for="content-area">Content:</label>
-                <textarea class="form-control" id="content-area" rows="5">{{description}}</textarea>
+                <label class="display-6" >Content:</label>
+                <textarea class="form-control" for="content-area" rows="5" id="content-area">{{description}}</textarea>
             </div>
             <div class="row justify-content-center text-center">
-                <button type="submit" class="col-3 btn btn-success m-2">EDIT POST</button>
+                <a type="submit"  id="editPost" class="col-3 btn btn-success m-2"  type="button">EDIT POST</a>
                 <a type="submit" id="deletePost" class="col-3 btn btn-danger m-2" type="button">DELETE POST</a>
             </div>
         </form>

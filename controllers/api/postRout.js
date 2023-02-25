@@ -20,20 +20,20 @@ router.put("/:id", withAuth, async (req, res) => {
   try{
     const editPost = await Post.update({
       title: req.body.title,
-      content: req.body.description,
+      description: req.body.description,
       }, 
-        {
-          where: {
-              id: req.params.id,
-          },
+      {
+      where: {
+        id: req.params.id,
+        },
       })
     if (!editPost) {
       res.status(404).json({ message: '404 not found' });
       return;
     }
     res.status(200).json(editPost);
-  }
-    catch (err) {
+    console.log(editPost)
+  } catch (err) {
       res.status(500).json(err);
     }
 });
